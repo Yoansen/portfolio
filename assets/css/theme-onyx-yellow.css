@@ -1,0 +1,275 @@
+
+/* === Full Black Site + Highlighted Top Nav === */
+:root {
+  --bg: #000000;
+  --text: #eeeeee;
+  --muted: #cfcfcf;
+  --accent: #ffe770; /* light yellow for nav */
+  --accent-text: #111;
+  --border-soft: rgba(255, 255, 255, 0.08);
+}
+
+html, body { background:#000 !important; color:var(--text) !important; }
+
+section, main, .container, .wrap, .content, .panel, .box,
+.card, .stat, .stats, .project-card, .hero, .about, .grid,
+.article, .prose, .footer, .features, .row, .col {
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: var(--border-soft) !important;
+}
+
+h1, h2, h3, h4, h5, h6 { color:#fff !important; }
+p, li, span, small, time, td, th { color:var(--text) !important; }
+
+a { color:#ffd400 !important; }
+a:hover { color:#ffdf33 !important; text-decoration:none; }
+
+button, .btn, .cta, .chip, .badge, .tag {
+  background: #ffd400 !important;
+  color: #111 !important;
+  border: 1px solid #ffdf33 !important;
+  box-shadow: 0 6px 18px rgba(255, 212, 0, 0.25) !important;
+}
+
+.hourglass-lock { background: #ffd400 !important; color:#111 !important; }
+.hourglass-lock .tooltip { background: rgba(0,0,0,0.92) !important; color:#fff !important; }
+.hourglass-lock .tooltip::before { border-bottom-color: rgba(0,0,0,0.92) !important; }
+
+header, nav, .topnav, .site-header, .navbar, .nav, .menu, .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--accent) !important;
+  color: var(--accent-text) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 8px 30px rgba(255, 231, 112, 0.2) !important;
+}
+
+header a, nav a, .topnav a, .navbar a, .menu a {
+  color: var(--accent-text) !important;
+  font-weight: 600;
+}
+header a:hover, nav a:hover, .topnav a:hover, .navbar a:hover, .menu a:hover {
+  opacity: .9;
+}
+
+footer, .site-footer {
+  background: #000 !important;
+  color: var(--muted) !important;
+  border-top: 1px solid var(--border-soft) !important;
+}
+
+.card, .project-card, .stat {
+  border: 1px solid var(--border-soft) !important;
+  border-radius: 16px !important;
+}
+
+.hero img, .banner img, .thumb img { filter:none !important; }
+
+/* === Text Justify (Option 1: paragraphs & long-form only) === */
+.about p,
+section p,
+.card p,
+.project-card p,
+.prose p,
+.content p,
+.description p,
+.text p,
+li {
+  text-align:left !important;
+  text-justify: inter-word !important;
+}
+
+/* Keep headings, buttons, nav, badges, and stats not justified */
+h1, h2, h3, h4, h5, h6,
+button, .btn, .cta, nav, .navbar, .topnav, .menu, .chip, .badge, .tag, .stat .big, .stat .sub {
+  text-align: initial !important;
+}
+
+/* === Project cards & media frames: yellow borders + hover glow === */
+.project-card, .card, .image-wrapper, .thumb, .project-media, .cover {
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  transition: border-color .25s ease, box-shadow .25s ease, transform .2s ease;
+  border-radius: 16px;
+}
+
+.project-card:hover, .card:hover, .image-wrapper:hover, .thumb:hover, .project-media:hover, .cover:hover {
+  border-color: #FFD400 !important;
+  box-shadow: 0 0 12px rgba(255, 212, 0, 0.40) !important;
+}
+
+/* Also ensure stats boxes hover stays yellow */
+.stat, .stats .stat, .experience-box {
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+.stat:hover, .stats .stat:hover, .experience-box:hover {
+  border-color: #FFD400 !important;
+  box-shadow: 0 0 12px rgba(255, 212, 0, 0.40) !important;
+}
+
+/* === Project titles: force yellow text === */
+.project-card a,
+.project-card h3,
+.project-card .title,
+.project-card-title,
+.image-wrapper h3,
+.image-wrapper a,
+.project-media h3,
+.project-media a {
+  color: #FFD400 !important;
+}
+.project-card a:hover,
+.image-wrapper a:hover,
+.project-media a:hover {
+  color: #ffea63 !important;
+  text-decoration: none !important;
+}
+
+/* === Projects: yellow titles + inner frame === */
+.image-wrapper,
+.project-card .image-wrapper,
+.project-card .frame,
+.project-media,
+.project-card {
+  border: 2px solid #FFD400 !important; /* default yellow frame */
+  border-radius: 16px !important;
+}
+
+.image-wrapper:hover,
+.project-card .image-wrapper:hover,
+.project-card .frame:hover,
+.project-media:hover,
+.project-card:hover {
+  border-color: #FFE766 !important; /* lighter on hover */
+  box-shadow: 0 0 12px rgba(255, 231, 102, 0.35) !important;
+}
+
+/* Titles/links inside project cards */
+.project-card a,
+.project-card h3,
+.project-card .title,
+.image-wrapper h3,
+.image-wrapper a,
+.project-media h3,
+.project-media a {
+  color: #FFD400 !important;
+}
+.project-card a:hover,
+.image-wrapper a:hover,
+.project-media a:hover {
+  color: #FFE766 !important;
+  text-decoration: none !important;
+}
+
+/* Yellow glow on hover */
+.card:hover, .project-item:hover {
+ box-shadow: 0 0 15px #FFD700;
+}
+
+/* Glow for contact boxes */
+.contact-item:hover, .contact-item a:hover, .icon-box:hover {
+ box-shadow: 0 0 12px 2px #FFD700;
+ transform: translateY(-3px);
+}
+
+/* yellow border for stats boxes */
+.stats-item, .facts-item, .counter-box {
+ border: 1px solid #FFD700;
+}
+
+.project-item { border-color:#FFD700 !important; color:#FFD700; }
+
+.project-item {
+    border-color: #FFD700 !important;
+}
+.project-item h3, .project-item p, .project-item a {
+    color: #ffffff !important;
+}
+.project-item:hover {
+    box-shadow: 0 0 15px #FFD700;
+    transform: translateY(-3px);
+}
+
+/* Yellow inner border for project icons/images */
+.project-item img, .project-thumbnail, .project-box {
+    border: 2px solid #FFD700 !important;
+}
+
+/* Project cards text and border to yellow */
+.project-item, .project-item * {
+    color: #FFD700 !important;
+}
+.project-item {
+    border-color: #FFD700 !important;
+}
+.project-item img, .project-thumbnail, .project-box {
+    border-color: #FFD700 !important;
+}
+
+/* Yellow filter overlay for project previews */
+#projets-competences .card img {
+    filter: sepia(100%) saturate(500%) hue-rotate(-15deg) brightness(90%);
+}
+
+/* =====================
+   Mobile layout fixes
+   ===================== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+/* Common content width on small screens */
+@media (max-width: 980px) {
+  .main, section.section, .container, .wrap, .content { padding-left: 14px; padding-right: 14px; }
+
+  /* Projects grid: single column */
+  #projets-competences .grid,
+  #projets-competences .cards,
+  #projets-competences .row,
+  #projets-competences { display: grid; grid-template-columns: 1fr; gap: 18px; }
+
+  /* Cards full width & spacing */
+  #projets-competences article.card {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 14px !important;
+  }
+
+  /* Project preview images */
+  #projets-competences .card img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Titles and text sizing */
+  #projets-competences .card h3 { font-size: 20px !important; line-height: 1.2; margin-top: 12px; }
+  #projets-competences .card p { font-size: 15px; line-height: 1.6; }
+
+  /* Wrap long words and avoid overflow */
+  #projets-competences .card * { word-break: break-word; overflow-wrap: anywhere; hyphens: auto; }
+
+  /* Badges: wrap to new lines */
+  #projets-competences .badges { display: flex; flex-wrap: wrap; gap: 10px; }
+  #projets-competences .badge { margin: 0; }
+
+  /* Reduce big icon button size on mobile if present */
+  #projets-competences .cta, 
+  #projets-competences .actions,
+  #projets-competences .btn-large { transform: none; }
+
+  /* Top nav: allow wrapping on small screens */
+  header.topnav nav { flex-wrap: wrap; gap: 8px; }
+  header.topnav .brand { margin-bottom: 6px; }
+}
+
+/* Medium screens: two columns */
+@media (min-width: 981px) and (max-width: 1200px) {
+  #projets-competences .grid,
+  #projets-competences .cards,
+  #projets-competences .row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  #projets-competences article.card { width: 100% !important; }
+}
